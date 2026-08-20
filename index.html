@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Toko Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Kontainer Utama Aplikasi -->
+  <div id="app"></div>
+
+  <!-- Modal Dialog Global -->
+  <div id="editProductModal" class="modal">
+    <div class="modal-content">
+      <h3>Edit Produk</h3>
+      <input type="text" id="editName" placeholder="Nama Produk">
+      <input type="number" id="editPrice" placeholder="Harga">
+      <input type="number" id="editStock" placeholder="Stok">
+      <textarea id="editDesc" placeholder="Deskripsi"></textarea>
+      <div class="modal-actions">
+        <button onclick="saveEditProduct()">Simpan</button>
+        <button onclick="closeEditProductModal()">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="supplierModal" class="modal">
+    <div class="modal-content">
+      <h3 id="supplierModalTitle">Tambah Supplier</h3>
+      <input type="text" id="supName" placeholder="Nama Supplier">
+      <small id="errSupName" class="error-text" style="display:none;color:red;">Nama wajib diisi</small>
+      <input type="text" id="supContact" placeholder="Kontak PIC">
+      <input type="text" id="supPhone" placeholder="No. Telepon">
+      <small id="errSupPhone" class="error-text" style="display:none;color:red;">Format telepon tidak valid</small>
+      <input type="email" id="supEmail" placeholder="Email">
+      <select id="supCat">
+        <option value="smartphone">Smartphone</option>
+        <option value="laptop">Laptop</option>
+        <option value="aksesoris">Aksesoris</option>
+      </select>
+      <textarea id="supAddress" placeholder="Alamat"></textarea>
+      <select id="supStatus">
+        <option value="Aktif">Aktif</option>
+        <option value="Nonaktif">Nonaktif</option>
+      </select>
+      <div class="modal-actions">
+        <button onclick="saveSupplier()">Simpan</button>
+        <button onclick="closeSupplierModal()">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteSupplierModal" class="modal">
+    <div class="modal-content">
+      <h3>Hapus Supplier</h3>
+      <p id="deleteSupplierText">Yakin ingin menghapus supplier ini?</p>
+      <div class="modal-actions">
+        <button onclick="confirmDeleteSupplier()">Hapus</button>
+        <button onclick="closeDeleteSupplierModal()">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <span id="toastMsg"></span>
+  </div>
+
+  <!-- Load File JavaScript Berurutan -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+  <script src="customer.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
