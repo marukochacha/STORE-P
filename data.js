@@ -1,49 +1,66 @@
 /* ======================= DATA PRODUK GADGET ======================= */
 /* Catatan PENTING soal foto & video lokal:
-   Produk di bawah ini memakai nama FILE LOKAL (bukan link internet),
-   contoh: "ipad.jpg" dan "ipad.mp4". Supaya muncul, taruh file-file berikut
-   PERSIS di folder yang SAMA dengan file index.html ini:
-     - ipad.jpg      + ipad.mp4
-     - iphone 15.jpg + iphone.mp4
-     - case.jpg      + case.mp4
-     - macbook.jpg   + VID MACBOOK.mp4
+   Produk di bawah ini memakai nama FILE LOKAL (bukan link internet).
+   Supaya muncul, taruh file-file berikut PERSIS di folder yang SAMA
+   dengan file index.html ini:
+     - ipad.jpg        + ipadvid.mp4
+     - 15.jpg          + 15vid.mp4
+     - 16.jpg          + 16vid.mp4
+     - 17.jpg          + 17vid.mp4
+     - 17pro.jpg       + 17provid.mp4
+     - case1.jpg       + case1.mp4
+     - case2.jpg       + case2.mp4
+     - macbook neo .jpg + neovid.mp4
    Kalau kamu buka index.html langsung dari HP/laptop (double click), taruh
    semua file gambar & video itu satu folder dengan index.html.
    Kalau di-hosting/upload ke server, upload juga semua file itu di folder
    yang sama dengan index.html.
-   Catatan: nama file yang ada spasi ("iphone 15.jpg", "VID MACBOOK.mp4")
-   ditulis di kode pakai %20 (kode untuk spasi), tapi file aslinya tetap
-   kamu simpan dengan nama asli (pakai spasi biasa), tidak perlu diganti.
-
-   PERBAIKAN: video iPad sebelumnya tertulis "pad.mp4" (typo, kurang huruf
-   "i") sehingga tidak ketemu filenya dan gagal diputar. Sekarang sudah
-   dibetulkan jadi "ipad.mp4" — pastikan nama file video iPad kamu juga
-   persis "ipad.mp4". */
+   Catatan: nama file yang ada spasi ("macbook neo .jpg") ditulis di kode
+   pakai %20 (kode untuk spasi), tapi file aslinya tetap kamu simpan dengan
+   nama asli (pakai spasi biasa), tidak perlu diganti. */
 const DEMO_VIDEO = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
 
 const products = [
   {id:1,name:"iPad",price:7999000,oldPrice:8999000,desc:"Tablet layar lebar dengan performa kencang, cocok untuk kerja, belajar, gambar digital, dan hiburan.",rating:4.8,sold:412,stock:48,cat:"ipad",badge:"Best Seller",
    img:"ipad.jpg",
    gallery:["ipad.jpg"],
-   video:"ipad.mp4",
+   video:"ipadvid.mp4",
    colors:[{name:"Space Gray",hex:"#3a3d40"},{name:"Silver",hex:"#c9cdd1"}],
    sizes:["128GB","256GB"]},
   {id:2,name:"iPhone 15",price:13999000,oldPrice:14999000,desc:"Smartphone flagship dengan kamera canggih, performa cepat, dan desain premium.",rating:4.9,sold:288,stock:120,cat:"smartphone",badge:"Baru",
-   img:"iphone%2015.jpg",
-   gallery:["iphone%2015.jpg"],
-   video:"iphone.mp4",
+   img:"15.jpg",
+   gallery:["15.jpg"],
+   video:"15vid.mp4",
    colors:[{name:"Hitam",hex:"#1c1c1c"},{name:"Putih",hex:"#f5f5f5"},{name:"Biru",hex:"#2e6cd9"}],
    sizes:["128GB","256GB"]},
-  {id:3,name:"Case",price:99000,oldPrice:129000,desc:"Case pelindung pas di bodi, bahan kuat anti benturan, tetap tipis dan nyaman digenggam.",rating:4.7,sold:196,stock:65,cat:"aksesoris",badge:"Best Seller",
-   img:"case.jpg",
-   gallery:["case.jpg"],
-   video:"case.mp4",
+  {id:3,name:"iPhone 16",price:15999000,oldPrice:16999000,desc:"Generasi terbaru dengan chip lebih kencang, kamera lebih tajam, dan baterai lebih awet.",rating:4.9,sold:203,stock:95,cat:"smartphone",badge:"Baru",
+   img:"16.jpg",
+   gallery:["16.jpg"],
+   video:"16vid.mp4",
+   colors:[{name:"Hitam",hex:"#1c1c1c"},{name:"Putih",hex:"#f5f5f5"},{name:"Ungu",hex:"#8a6bd9"}],
+   sizes:["128GB","256GB"]},
+  {id:4,name:"iPhone 17",price:17999000,oldPrice:null,desc:"Smartphone terbaru dengan desain lebih tipis, layar lebih responsif, dan performa kelas atas.",rating:4.9,sold:97,stock:80,cat:"smartphone",badge:"Baru",
+   img:"17.jpg",
+   gallery:["17.jpg"],
+   video:"17vid.mp4",
+   colors:[{name:"Hitam",hex:"#1c1c1c"},{name:"Putih",hex:"#f5f5f5"},{name:"Lavender",hex:"#c9b6e4"}],
+   sizes:["128GB","256GB"]},
+  {id:5,name:"iPhone 17 Pro",price:21999000,oldPrice:null,desc:"Versi Pro dengan kamera profesional, bodi titanium, dan performa paling kencang di lini iPhone 17.",rating:4.9,sold:64,stock:40,cat:"smartphone",badge:"Baru",
+   img:"17pro.jpg",
+   gallery:["17pro.jpg"],
+   video:"17provid.mp4",
+   colors:[{name:"Titanium Hitam",hex:"#2b2b2b"},{name:"Titanium Putih",hex:"#d8d6d1"}],
+   sizes:["256GB","512GB"]},
+  {id:6,name:"Case",price:99000,oldPrice:129000,desc:"Case pelindung pas di bodi, bahan kuat anti benturan, tetap tipis dan nyaman digenggam.",rating:4.7,sold:196,stock:65,cat:"aksesoris",badge:"Best Seller",
+   img:"case1.jpg",
+   gallery:["case1.jpg","case2.jpg"],
+   video:"case1.mp4",
    colors:[{name:"Hitam",hex:"#1c1c1c"},{name:"Bening",hex:"#e9e9e9"}],
    sizes:["Standard"]},
-  {id:4,name:"MacBook",price:16999000,oldPrice:null,desc:"Laptop tipis dan ringan dengan performa kencang, baterai awet, cocok untuk kerja maupun kuliah.",rating:4.8,sold:150,stock:20,cat:"macbook",badge:"Baru",
-   img:"macbook.jpg",
-   gallery:["macbook.jpg"],
-   video:"VID%20MACBOOK.mp4",
+  {id:7,name:"MacBook",price:16999000,oldPrice:null,desc:"Laptop tipis dan ringan dengan performa kencang, baterai awet, cocok untuk kerja maupun kuliah.",rating:4.8,sold:150,stock:20,cat:"macbook",badge:"Baru",
+   img:"macbook%20neo%20.jpg",
+   gallery:["macbook%20neo%20.jpg"],
+   video:"neovid.mp4",
    colors:[{name:"Silver",hex:"#c9cdd1"},{name:"Space Gray",hex:"#3a3d40"}],
    sizes:["256GB","512GB"]},
 ];
